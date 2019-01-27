@@ -6,6 +6,7 @@ import Hotels from "../hotels/hotels";
 
 const App = () => (
   <div className="app-container">
+      App Component
     <Title/>
     <Preferences/>
     <Sorter/>
