@@ -1,10 +1,25 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {persistState} from './initialize/localStorage';
+import configureStore from './store/configureStore';
+import 'typeface-roboto';
+import Root from './initialize/Root';
+import throttle from 'lodash.throttle';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const store = configureStore();
+
+store.subscribe(throttle(() => {
+    persistState({
+        hotels: store.getState().hotels
+    });
+}, 1000));
+
+render(
+    <Root store={store}/>,
+    document.getElementById('root'));
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
