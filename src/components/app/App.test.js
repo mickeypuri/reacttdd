@@ -1,6 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
+import Title from '../title/title';
+import Sorter from '../sorter/sorter';
+import Hotels from '../hotels/hotels';
+import Preferences from '../preferences/preferences';
 
 describe('App', () => {
     it('should render a <div />', () => {
