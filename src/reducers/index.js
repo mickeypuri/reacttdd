@@ -1,10 +1,11 @@
 import {combineReducers} from 'redux';
-
-const preferences = null;
-const hotels = null;
+import hotels from './hotels';
+import preferences from './preferences';
+import sortOrder from './sortOrder';
 
 const rootReducer = combineReducers({
     preferences,
+    sortOrder,
     hotels
 });
 
