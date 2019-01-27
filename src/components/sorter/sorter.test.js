@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Sorter from './hotels';
+import Sorter from './sorter';
 import Preferences from "../preferences/preferences";
 import Preference from "../preference/preference";
 
