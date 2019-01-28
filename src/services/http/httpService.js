@@ -23,7 +23,7 @@ switch (process.env.REACT_APP_ENV) {
         throw new Error('Invalid Environment Variable');
 }
 
-// export the instance to allow for setting up a mock adaptor
+// export instance to allow access for mocking in tests
 export const instance = axios.create(baseOptions);
 
 const httpService = {

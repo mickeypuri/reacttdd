@@ -8,15 +8,15 @@ import {instance} from '../../services/http/httpService';
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
-let axiosMock = new mockAdapter(instance);
+const axiosMock = new mockAdapter(instance);
 
-describe('async fetch hotels action', () => {
+describe('async fetchHotels action creator', () => {
    afterEach(() => {
        axiosMock.restore();
    });
 
    it ('emits FETCH_HOTELS_REQUEST and FETCH_HOTELS_SUCCESS actions when hotels are fetched', () => {
-       const hotelData = [{name: 'hotel 1'}, {name: 'hotel 2'}, {name: 'hotel 3'}];
+        const hotelData = [{name: 'hotel 1'}, {name: 'hotel 2'}, {name: 'hotel 3'}];
         axiosMock.onGet('/hotels').reply(200, hotelData);
 
         const expectedActions = [
