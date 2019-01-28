@@ -6,7 +6,7 @@ const preferences = (state = initialState, action) => {
     if (action.type === types.PREFERENCES) {
         return null; //action.payload;
     }
-    return null; //state;
+    return state;
 };
 
 export default preferences;
