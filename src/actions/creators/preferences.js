@@ -1,3 +1,3 @@
 import types from '../actionTypes';
-const sortOrder = () => ({type: types.PREFERENCES});
+const sortOrder = (payload) => ({type: types.PREFERENCES, payload});
 export default sortOrder;
