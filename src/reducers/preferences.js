@@ -4,7 +4,7 @@ const initialState = [];
 
 const preferences = (state = initialState, action) => {
     if (action.type === types.PREFERENCES) {
-        return null; //action.payload;
+        return action.payload;
     }
     return state;
 };
