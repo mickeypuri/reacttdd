@@ -4,9 +4,9 @@ const initialState = [];
 
 const hotels = (state = initialState, action) => {
     if (action.type === types.HOTELS) {
-        return null; //action.payload;
+        return action.payload;
     }
-    return null; //state;
+    return state;
 };
 
 export default hotels;
