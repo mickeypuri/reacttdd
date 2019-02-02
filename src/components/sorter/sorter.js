@@ -11,16 +11,18 @@ const Button = styled.button`
 
 export class Sorter extends Component {
 
+    sortClicked = direction => direction !== this.props.sortOrder ? this.props.sortClicked(direction) : null;
+
     render() {
         return (
             <div className='sorter-container'>
                 <Button className={classNames('sort-button', {active: this.props.sortOrder === 'asc'})}
-                        onClick={() => this.props.sortClicked('asc')}
+                        onClick={() => this.sortClicked('asc')}
                 >
                     Ascending
                 </Button>
                 <Button className={classNames('sort-button', {active: this.props.sortOrder === 'desc'})}
-                        onClick={() => this.props.sortClicked('desc')}
+                        onClick={() => this.sortClicked('desc')}
                 >Descending
                 </Button>
             </div>
