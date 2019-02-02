@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Preference from "../preference/preference";
 import preferenceList from './preferences.config';
+import {connect} from 'react-redux';
 
 const Preferences = () => (
   <div className="preferences-container">
@@ -13,4 +14,10 @@ const Preferences = () => (
   </div>
 );
 
-export default Preferences;
+const mapStateToProps = state => ({
+        preferences: state.preferences
+    });
+
+export {Preferences};
+
+export default connect(mapStateToProps)(Preferences);
