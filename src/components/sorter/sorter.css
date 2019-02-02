@@ -7,5 +7,6 @@
 
 .active {
     border: 2px solid orangered;
-    background-color: orange;
+    background-color: peachpuff;
+    font-weight:bold;
 }
