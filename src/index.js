@@ -11,8 +11,13 @@ import throttle from 'lodash.throttle';
 const store = configureStore();
 
 store.subscribe(throttle(() => {
+
+    const {hotels, sortOrder, preferences} = store.getState();
+
     persistState({
-        hotels: store.getState().hotels
+        hotels,
+        sortOrder,
+        preferences
     });
 }, 1000));
 

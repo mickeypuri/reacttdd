@@ -7,8 +7,8 @@ import Hotels from "../hotels/hotels";
 const App = () => (
   <div className="app-container">
     <Title/>
-    <Preferences/>
     <Sorter/>
+    <Preferences/>
     <Hotels/>
   </div>
 );

@@ -17,6 +17,7 @@ export const loadState = () => {
 export const persistState = (state) => {
   try {
       const serializedState = JSON.stringify(state);
+      console.log(serializedState);
       localStorage.setItem(STATE_KEY, serializedState);
   }  catch (err) {
       // Ignore error
