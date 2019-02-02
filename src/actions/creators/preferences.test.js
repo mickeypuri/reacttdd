@@ -3,10 +3,11 @@ import types from '../actionTypes';
 
 describe('preferences action creator', () => {
    it ('should create an action for preferences', () => {
-       const payload = ['non-smoking', 'twin'];
-       const action = preferencesCreator(payload);
+       const payload = {preference: 'smoking', isChecked: true};
+       const action = preferencesCreator('smoking', true);
 
        expect(action.type).toEqual(types.PREFERENCES);
-       expect(action.payload).toEqual(payload);
+       expect(action.payload.preference).toEqual('smoking');
+       expect(action.payload.isChecked).toEqual(true);
    }) ;
 });

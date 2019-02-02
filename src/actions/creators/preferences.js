@@ -1,3 +1,8 @@
 import types from '../actionTypes';
-const sortOrder = (payload) => ({type: types.PREFERENCES, payload});
-export default sortOrder;
+
+const preferencesCreator = (preference, isChecked) => ({
+    type: types.PREFERENCES,
+    payload: {preference, isChecked}
+});
+
+export default preferencesCreator;

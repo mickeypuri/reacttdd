@@ -4,12 +4,12 @@ import Preference from './preference';
 
 describe('Preference', () => {
     it('should render a <div />', () => {
-        const wrapper = shallow(<Preference name='test1'/>);
+        const wrapper = shallow(<Preference name='test1' onChange={()=>{}}/>);
         expect(wrapper.find('div').length).toEqual(1);
     });
 
     it('should contain an input element', () => {
-        const wrapper = shallow(<Preference name='test1'/>);
+        const wrapper = shallow(<Preference name='test1' onChange={()=>{}} />);
         expect(wrapper.find('input').length).toEqual(1);
     });
 });
