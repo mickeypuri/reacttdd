@@ -4,3 +4,7 @@
     justify-items: center;
     padding: 1.5em;
 }
+
+.active {
+    border: 2px solid orange;
+}

@@ -1,22 +1,30 @@
 import React, {Component} from 'react';
 import './sorter.css';
 import styled from 'styled-components';
+import classNames from 'classnames';
+import {connect} from 'react-redux';
 
 const Button = styled.button`
     width: 100px;
 `;
 
-class Sorter extends Component {
+export class Sorter extends Component {
 
-    
     render() {
         return (
             <div className='sorter-container'>
-                <Button className='sort-button'>Ascending</Button>
-                <Button className='sort-button'>Descending</Button>
+                <Button className={classNames('sort-button', {active: this.props.sortOrder === 'asc'})}>Ascending</Button>
+                <Button className={classNames('sort-button', {active: this.props.sortOrder === 'desc'})}>Descending</Button>
             </div>
             );
     }
 }
 
-export default Sorter;
+const mapStateToProps = state => ({
+    sortOrder: state.sortOrder
+});
+
+
+export default connect(mapStateToProps)(Sorter);
+
+
