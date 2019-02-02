@@ -1,9 +1,15 @@
 import React, {Component} from 'react';
+import './sorter.css';
+import styled from 'styled-components';
+
+const Button = styled.button`
+    width: 100px;
+`;
 
 const Sorter = () => (
-  <div className="sorter-container">
-      <button className='sort-button'>Ascending</button>
-      <button className='sort-button'>Descending</button>
+  <div className='sorterContainer'>
+      <Button className='sort-button'>Ascending</Button>
+      <Button className='sort-button'>Descending</Button>
   </div>
 );
 
