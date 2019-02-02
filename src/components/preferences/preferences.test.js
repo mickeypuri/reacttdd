@@ -13,6 +13,6 @@ describe('Preferences', () => {
 
     it ('should contain a preference component', () => {
         const wrapper = shallow (<Preferences />);
-        expect(wrapper.containsMatchingElement(<Preference />)).toEqual(true);
+        expect(wrapper.containsMatchingElement(<Preference name='Dummy Name'/>)).toEqual(true);
     });
 });

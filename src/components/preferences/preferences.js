@@ -3,7 +3,7 @@ import Preference from "../preference/preference";
 
 const Preferences = () => (
   <div className="preferences-container">
-      <Preference/>
+      <Preference name='Dummy Name'/>
   </div>
 );
 
