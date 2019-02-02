@@ -6,5 +6,6 @@
 }
 
 .active {
-    border: 2px solid orange;
+    border: 2px solid orangered;
+    background-color: orange;
 }
