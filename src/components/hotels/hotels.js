@@ -2,16 +2,26 @@ import React, {Component} from 'react';
 import Hotel from './hotel';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import fetchHotels from '../../actions/asyncCreators/fetchHotels';
 
-const Hotels = (props) => (
-  <div className="hotels-container">
-      {
-          (props.hotels && props.hotels.length > 0) ? props.hotels.map((hotel, idx) => (
-              <Hotel hotel={hotel} key={idx}/>
-          )) : null
-      }
-  </div>
-);
+export class Hotels extends Component{
+
+    componentDidMount () {
+        this.props.fetchHotels(this.props.preferences);
+    }
+
+    render() {
+        return (
+            <div className="hotels-container">
+                {
+                    (this.props.hotels && this.props.hotels.length > 0) ? this.props.hotels.map((hotel, idx) => (
+                        <Hotel hotel={hotel} key={idx}/>
+                    )) : null
+                }
+            </div>
+        );
+    }
+}
 
 Hotels.propTypes = {
   hotels: PropTypes.arrayOf(PropTypes.shape({
@@ -23,9 +33,12 @@ Hotels.propTypes = {
 };
 
 const mapStateToProps = state => ({
-    hotels: state.hotels
+    hotels: state.hotels,
+    preferences: state.preferences
 });
 
-export {Hotels};
+const mapDispatchToProps = {
+    fetchHotels
+};
 
-export default connect(mapStateToProps)(Hotels);
+export default connect(mapStateToProps, mapDispatchToProps)(Hotels);
