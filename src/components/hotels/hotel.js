@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import HotelTitle from './HotelTitle';
 import PropTypes from 'prop-types';
+import './hotel.css';
 
 const Hotel = ({hotel: {name, imgUrl, features, book}}) => (
   <div className="hotel-container">

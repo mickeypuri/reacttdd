@@ -1,0 +1,29 @@
+.hotel-container {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 25% 75%;
+    grid-template-areas:
+        "title title title"
+        "image features action-button";
+    align-items: center;
+
+}
+
+.hotel-title {
+    grid-area: title;
+}
+
+.hotel-image {
+    grid-area: image;
+}
+
+.hotel-features {
+    grid-area: features;
+}
+
+.hotel-book-now {
+    grid-area: action-button;
+    height: 2.5em;
+    width: 8em;
+    cursor: pointer;
+}
