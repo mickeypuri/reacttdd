@@ -1,5 +1,5 @@
 const options = {
-    baseURL: 'http://my-local-domain/api/',
+    baseURL: 'http://localhost:3004',
     timeout: 20000
 };
 
