@@ -1,5 +1,6 @@
 .hotel-container {
     display: grid;
+    margin-left: 1em;
     grid-template-columns: 25% 50% 25%;
     grid-template-rows: 25% 75%;
     grid-template-areas:
@@ -14,11 +15,16 @@
 }
 
 .hotel-image {
+    padding-left:1em;
     grid-area: image;
 }
 
 .hotel-features {
     grid-area: features;
+}
+
+.hotel-features li {
+    list-style-type: disc;
 }
 
 .hotel-book-now {

@@ -3,6 +3,7 @@ import Hotel from './hotel';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import fetchHotels from '../../actions/asyncCreators/fetchHotels';
+import './hotels.css';
 
 export class Hotels extends Component{
 
