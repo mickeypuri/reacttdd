@@ -14,10 +14,6 @@ export class Sorter extends Component {
 
     sortClicked = direction => direction !== this.props.sortOrder ? this.props.sortClicked(direction) : null;
 
-    componentDidUpdate(prevProps) {
-        this.props.fetchHotels(this.props.preferences);
-    }
-
     render() {
         return (
             <div className='sorter-container'>
