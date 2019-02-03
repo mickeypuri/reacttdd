@@ -7,4 +7,9 @@ describe('Hotels', () => {
         const wrapper = shallow(<Hotels />);
         expect(wrapper.find('div').length).toEqual(1);
     });
+
+    it('should contain a title component', () => {
+        const wrapper = shallow(<Hotels />);
+        expect(wrapper.find('HotelTitle').length).toEqual(1);
+    });
 });
