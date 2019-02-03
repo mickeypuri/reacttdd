@@ -8,5 +8,5 @@ const middlewares = jsonServer.defaults();
 server.use(middlewares);
 server.use(router);
 server.listen(3004, () => {
-    console.log('JSON Server is running')
+    console.log('fake api: JSON Server is running')
 });

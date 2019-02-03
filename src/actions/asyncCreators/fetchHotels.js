@@ -1,7 +1,7 @@
 import hotelsRequestCreator from '../creators/hotelsRequest';
 import types from '../actionTypes';
 
-//import hotelData from './fakeApiData';
+import hotelData from './fakeApiData';
 
 import httpService from '../../services/http/httpService';
 
