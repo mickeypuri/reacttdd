@@ -1,12 +1,9 @@
 import React, {Component} from 'react';
-import HotelTitle from './HotelTitle';
+import Hotel from './hotel';
 
 const Hotels = () => (
   <div className="hotels-container">
-      <HotelTitle className='hotel-title'/>
-      <img className='hotel-image'></img>
-      <ul className='hotel-features'></ul>
-      <button className='hotel-book-now'>Book Now</button>
+        <Hotel />
   </div>
 );
 
