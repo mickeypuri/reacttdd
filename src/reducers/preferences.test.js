@@ -9,8 +9,8 @@ describe('preferences Reducer', () => {
     it ('should return the correct preferences', () => {
         const action = {
             type: types.PREFERENCES,
-            payload: ['non-smoking', 'executive']
+            payload: {preference: 'non-smoking', isChecked: true}
         };
-        expect(preferenceReducer(['single'], action)).toEqual(action.payload);
+        expect(preferenceReducer(['single'], action)).toEqual(['single', 'non-smoking']);
     });
 });

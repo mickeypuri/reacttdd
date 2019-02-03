@@ -7,7 +7,7 @@ In the project directory, you can run:
 ### `npm start:fake`
 
 Runs the app in the development mode and a fake api server.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.<br>
 Open [http://localhost:3004/hotels](http://localhost:3004/hotels) to view the fake api server in the browser
 fetching the hotels collection from the fake api
 

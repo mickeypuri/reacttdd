@@ -22,7 +22,7 @@ describe('Hotels', () => {
     ];
 
     it('should render a Hotel Component', ()=>{
-        const wrapper = shallow(<Hotels hotels={hotels}/>);
+        const wrapper = shallow(<Hotels hotels={hotels} fetchHotels={()=>{}}/>);
         expect(wrapper.find('Hotel').length).toEqual(2);
     });
 });

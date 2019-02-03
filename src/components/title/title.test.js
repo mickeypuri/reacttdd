@@ -3,8 +3,8 @@ import { shallow } from 'enzyme';
 import Title from './title';
 
 describe('Title', () => {
-    it('should render a <div />', () => {
+    it('should render a element with class title-container', () => {
         const wrapper = shallow(<Title />);
-        expect(wrapper.find('div').length).toEqual(1);
+        expect(wrapper.find('.title-container').length).toEqual(1);
     });
 });
