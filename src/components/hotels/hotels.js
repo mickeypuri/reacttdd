@@ -4,7 +4,9 @@ import HotelTitle from './HotelTitle';
 const Hotels = () => (
   <div className="hotels-container">
       <HotelTitle/>
-      
+
+      <img></img>
+
       <button>Book Now</button>
   </div>
 );

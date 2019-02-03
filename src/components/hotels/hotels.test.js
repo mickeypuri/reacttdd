@@ -16,5 +16,10 @@ describe('Hotels', () => {
     it('should contain a button for action', () => {
         const wrapper = shallow(<Hotels />);
         expect(wrapper.find('button').length).toEqual(1);
-    })
+    });
+
+    it('should contain an image of hotel', () => {
+        const wrapper = shallow(<Hotels />);
+        expect(wrapper.find('img').length).toEqual(1);
+    });
 });
