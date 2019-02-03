@@ -4,6 +4,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm start:fake`
+
+Runs the app in the development mode and a fake api server.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3004/hotels](http://localhost:3004/hotels) to view the fake api server in the browser
+fetching the hotels collection from the fake api
+
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
+
 ### `npm start`
 
 Runs the app in the development mode.<br>
