@@ -3,11 +3,13 @@ import HotelTitle from './HotelTitle';
 
 const Hotels = () => (
   <div className="hotels-container">
-      <HotelTitle/>
+      <HotelTitle className='hotel-title'/>
 
-      <img></img>
+      <img className='hotel-image'></img>
 
-      <button>Book Now</button>
+      <ul className='hotel-features'></ul>
+
+      <button className='hotel-book-now'>Book Now</button>
   </div>
 );
 

@@ -22,4 +22,9 @@ describe('Hotels', () => {
         const wrapper = shallow(<Hotels />);
         expect(wrapper.find('img').length).toEqual(1);
     });
+
+    it('should contain a list of features', () => {
+        const wrapper = shallow(<Hotels />);
+        expect(wrapper.find('ul').length).toEqual(1);
+    });
 });
