@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import sortClicked from '../../actions/creators/sortOrder';
+import fetchHotels from '../../actions/asyncCreators/fetchHotels';
 
 const Button = styled.button`
     width: 100px;
@@ -12,6 +13,10 @@ const Button = styled.button`
 export class Sorter extends Component {
 
     sortClicked = direction => direction !== this.props.sortOrder ? this.props.sortClicked(direction) : null;
+
+    componentDidUpdate(prevProps) {
+        this.props.fetchHotels(this.props.preferences);
+    }
 
     render() {
         return (
@@ -31,11 +36,13 @@ export class Sorter extends Component {
 }
 
 const mapStateToProps = state => ({
-    sortOrder: state.sortOrder
+    sortOrder: state.sortOrder,
+    preferences: state.preferences
 });
 
 const mapDispatchToProps = {
-    sortClicked
+    sortClicked,
+    fetchHotels
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Sorter);
