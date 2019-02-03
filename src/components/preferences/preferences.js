@@ -4,29 +4,38 @@ import preferenceList from './preferences.config';
 import {connect} from 'react-redux';
 import {includes} from 'ramda';
 import updatePreference from '../../actions/creators/preferences';
+import updateHotels from '../../actions/asyncCreators/fetchHotels';
 
-const Preferences = (props) => (
-  <div className="preferences-container">
-      {
-          preferenceList.map((item, idx) => (
-              <Preference
-                  name={item}
-                  key={idx}
-                  onChange={props.updatePreference}
-                  isChecked={includes(item, props.preferences)}/>
-          ))
-      }
-  </div>
-);
+export class Preferences extends Component {
+
+    componentDidUpdate() {
+        this.props.updateHotels(this.props.preferences);
+    }
+
+    render() {
+        return (
+            <div className="preferences-container">
+                {
+                    preferenceList.map((item, idx) => (
+                        <Preference
+                            name={item}
+                            key={idx}
+                            onChange={this.props.updatePreference}
+                            isChecked={includes(item, this.props.preferences)}/>
+                    ))
+                }
+            </div>
+        );
+    }
+}
 
 const mapStateToProps = state => ({
         preferences: state.preferences
     });
 
 const mapDispatchToProps = {
-    updatePreference
+    updatePreference,
+    updateHotels
 };
-
-export {Preferences};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Preferences);

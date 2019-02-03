@@ -1,6 +1,8 @@
 import hotelsRequestCreator from '../creators/hotelsRequest';
 import types from '../actionTypes';
 
+import hotelData from './fakeApiData';
+
 import httpService from '../../services/http/httpService';
 
 const fetchHotelSuccess = (body) => {
@@ -20,9 +22,12 @@ const fetchHotelFailure = (ex) => {
 const fetchHotels = (preferences) => dispatch => {
     dispatch(hotelsRequestCreator());
     const preference = preferences.join(':');
-    return httpService.get('/hotels', {params: {preference}})
+
+    dispatch(fetchHotelSuccess(hotelData));
+
+/*    return httpService.get('/hotels', {params: {preference}})
         .then(resp => dispatch(fetchHotelSuccess(resp.data)))
-        .catch(ex => dispatch(fetchHotelFailure(ex)));
+        .catch(ex => dispatch(fetchHotelFailure(ex)));*/
 };
 
 export default fetchHotels;
