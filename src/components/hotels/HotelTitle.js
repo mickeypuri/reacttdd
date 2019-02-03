@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
-const HotelTitle = () => (
-    <h2>Hotel Title goes here</h2>
+const HotelTitle = ({name}) => (
+    <h2>name</h2>
 );
 
 export default HotelTitle;
