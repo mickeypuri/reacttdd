@@ -12,4 +12,9 @@ describe('Hotels', () => {
         const wrapper = shallow(<Hotels />);
         expect(wrapper.find('HotelTitle').length).toEqual(1);
     });
+
+    it('should contain a button for action', () => {
+        const wrapper = shallow(<Hotels />);
+        expect(wrapper.find('button').length).toEqual(1);
+    })
 });
