@@ -45,6 +45,5 @@
         grid-template-areas:
                 "title title title"
                 "image features action-button";
-        align-items: center;
     }
 }

@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import {includes} from 'ramda';
 import updatePreference from '../../actions/creators/preferences';
 import updateHotels from '../../actions/asyncCreators/fetchHotels';
+import './preferences.css';
 
 export class Preferences extends Component {
 
